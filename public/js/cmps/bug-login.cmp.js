@@ -4,8 +4,8 @@ import {userService} from '../services/user.service.js'
 export default{
     name:"login",
     template:`
-    <div>
-    <h2>Login:</h2>
+    <div class="login-cmp flex">
+    <h2>Login: </h2>
     <form  @submit.prevent="login">
             <input type="text" v-model="credentials.userName" placeholder="Username" />
             <input type="password" id="pass" name="password" minlength="4" required v-model="credentials.password">            

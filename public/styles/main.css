@@ -9,6 +9,7 @@
 @import './pages/user-details.cmp.css';
 @import './cmps/bug-filter.cmp.css';
 @import './pages/bug-entry-cmp.css';
+@import './cmps/bug-login.cmp.css';
 
 * {
     box-sizing: border-box;
