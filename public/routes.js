@@ -1,7 +1,7 @@
 import bugApp from "./js/pages/bug-app.cmp.js";
 import bugDetails from "./js/pages/bug-details.cmp.js";
 import bugEdit from "./js/pages/bug-edit.cmp.js";
-import bugLogin from "./js/pages/bug-login.cmp.js";
+import bugEntry from "./js/pages/bug-entry.cmp.js";
 import bugSignup from "./js/pages/bug-signup.cmp.js";
 import usersAdmin from './js/pages/user-admin.cmp.js';
 import userDetails from './js/pages/user-details.cmp.js'
@@ -12,7 +12,7 @@ import userDetails from './js/pages/user-details.cmp.js'
 const bugRoutes = [
   {
     path:'/',
-    component:bugLogin
+    component:bugEntry
   },
   {
     path: "/bug",

@@ -1,7 +1,7 @@
 import {bugService} from '../services/bug.service.js'
 import {userService} from '../services/user.service.js'
 import bugList from '../cmps/bug-list.cmp.js'
-import bugLogin from '../pages/bug-login.cmp.js'
+// import bugLogin from '../cmps/bug-login.cmp.js'
 import bugFilter from '../cmps/bug-filter.cmp.js'
 
 export default {
@@ -9,12 +9,12 @@ export default {
   template: `
     <section class="bug-app"> 
 
-    <bug-login v-if="!loggedInUser"/>
+    <!-- <bug-login v-if="!loggedInUser"/>
         <section v-else>
-            <!-- <h3 class="bug-app-welcome">
+            <h3 class="bug-app-welcome">
                 Welcome {{loggedInUser.userName}}            
-            </h3> -->
-        </section>
+            </h3>
+        </section> -->
         <div class="bugs-list-header flex space-between ">
             <h2> Bugs list</h2>
             <bug-filter v-on:setFilter="setFilter" class="bug-filter"> </bug-filter>
@@ -90,7 +90,7 @@ export default {
     },
     components:{
         bugList,
-        bugLogin,
+        // bugLogin,
         bugFilter
     },
     computed:{

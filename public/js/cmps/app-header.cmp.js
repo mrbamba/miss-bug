@@ -1,9 +1,10 @@
 
 import {userService} from '../services/user.service.js'
+import bugLogin from '../cmps/bug-login.cmp.js'
 
 export default{
     name:"app-header",
-    props:['loggedInUser'],
+    // props:['loggedInUser'],
     template:`
     <section class="app-header flex space-between just">
     <h1> Miss Bug</h1>
@@ -26,14 +27,17 @@ export default{
             <i class="fas fa-sign-out-alt"></i>
         </li>
     </ul>
+    <bug-login v-else @checkLoggedInUser="checkLoggedInUser"/>
 </section>
     `,data(){
         return{
+            loggedInUser:null,
             // loggedInUser: userService.getLoggedInUser(),
         }
     },
     methods:{
         logout(){
+            this.loggedInUser=null;
             userService.logout()
                 .then(()=>{
                     // this.bugs=null
@@ -43,11 +47,12 @@ export default{
                     this.$router.push('/');
                 })
         },
+        checkLoggedInUser(){
+            this.loggedInUser= userService.getLoggedInUser()
+        }
+    },
+    components:{
+        bugLogin,
     }
-    // computed:{
-    //     isAdmin(){
-    //         if (this.loggedInUser.isAdmin)
-    //     }
-    // },
 
 }
