@@ -4,7 +4,7 @@
     "description": "Needs to be refactored.",
     "severity": "2",
     "createdAt": 1593804893641,
-    "isDone": false,
+    "status": "to-do",
     "creator": {
       "_id": "dfdvdjn",
       "fullName": "Dan H"
@@ -16,7 +16,7 @@
     "description": "need to be implemented on bugs list page.",
     "severity": 1,
     "createdAt": 1593783104408,
-    "isDone": false,
+    "status": "in-progress",
     "creator": {
       "_id": "dfvjnd",
       "fullName": "Admin"
@@ -28,7 +28,7 @@
     "description": "It seems all padding is gone everywhere.",
     "severity": "2",
     "createdAt": 1593783060351,
-    "isDone": false,
+    "status": "done",
     "creator": {
       "_id": "dfvjnd",
       "fullName": "Admin"

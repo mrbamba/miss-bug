@@ -35,6 +35,10 @@ export default{
             // loggedInUser: userService.getLoggedInUser(),
         }
     },
+    created(){
+            this.loggedInUser= userService.getLoggedInUser();
+
+    },
     methods:{
         logout(){
             this.loggedInUser=null;

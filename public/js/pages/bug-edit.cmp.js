@@ -1,10 +1,9 @@
-import {bugService} from '../services/bug.service.js'
-import {userService} from '../services/user.service.js'
-
+import { bugService } from "../services/bug.service.js";
+import { userService } from "../services/user.service.js";
 
 export default {
-    name:"bug-edit",
-    template:`
+  name: "bug-edit",
+  template: `
     <section class="edit-bug">
         <h1>Bug Edit/Add</h1>
         <form class="edit-bug-table flex">
@@ -28,10 +27,15 @@ export default {
 
                 <tr>
                     <td>
-                        <label for="status">Done?:</label>
+                        <label for="status">Status:</label>
                     </td>
                     <td>
-                        <input type="checkbox" id="status" name="status" v-model="bug.isDone"/>
+                        <select name="cars" id="status" v-model="bug.status">
+                            <option value="to-do">To Do</option>
+                            <option value="in-progress">In Progress</option>
+                            <option value="qa">QA</option>
+                            <option value="done">Done</option>
+                            </select>
                     </td>
                 </tr>
 
@@ -55,40 +59,38 @@ export default {
         </form>
     </section>
     `,
-    data(){
-        return{
-            loggedInUser: userService.getLoggedInUser(),
-            bug:{
-            "title": "",
-            "description": "",
-            "severity": 1,
-            "createdAt": null,
-            "isDone": false,
-            "creator": {
-              "nickname": ""
-            }}
-        }
-    },
-    created() {
-        if (!this.loggedInUser){this.$router.push('/');}
-
-        const bugId = this.$route.params.id;
-      if (bugId) {
-        bugService.getById(bugId)
-            .then((bug) => {
-            this.bug = bug;
-        });
-      }
-    },
-    methods:{
-        save(){
-            bugService.save(this.bug)
-                .then(bug=>{
-
-                this.$router.push('/bug/'+bug._id)
-            })
-
-        }
+  data() {
+    return {
+      loggedInUser: userService.getLoggedInUser(),
+      bug: {
+        title: "",
+        description: "",
+        severity: 1,
+        createdAt: null,
+        isDone: false,
+        creator: {
+          nickname: "",
+        },
+      },
+    };
+  },
+  created() {
+    if (!this.loggedInUser) {
+      this.$router.push("/");
     }
-}
 
+    const bugId = this.$route.params.id;
+    if (bugId) {
+      bugService.getById(bugId).then((bug) => {
+        this.bug = bug;
+      });
+    }
+  },
+  methods: {
+    save() {
+      bugService.save(this.bug).then((bug) => {
+        this.$router.push("/bug/" + bug._id);
+      });
+    },
+  },
+};

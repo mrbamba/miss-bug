@@ -10,7 +10,7 @@ export default {
 
         <h3>Title: {{bug.title}}</h3>
         <p>Severity: {{bug.severity}}</p>
-        <p>Done: {{bug.isDone}}</p>
+        <p>Status: {{bug.status}}</p>
         <p>Created: {{timeFormatted}}</p>
         <p @click="openUserDetails" class="bug-details-creator">Created by: {{bug.creator.fullName}}</p>
         <p>Description: {{bug.description}}</p>

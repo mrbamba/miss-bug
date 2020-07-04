@@ -18,7 +18,7 @@ const VIEW_DIR = `${__dirname}/public`;
 const app = express();
 
 // server port
-const port = 3006;
+const port = 3007;
 
 // Express config
 app.use(cookieParser());
