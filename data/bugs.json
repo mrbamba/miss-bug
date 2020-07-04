@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Server issues - filtering halts",
+    "description": "Needs to be refactored.",
+    "severity": "2",
+    "createdAt": 1593804893641,
+    "isDone": false,
+    "creator": {
+      "_id": "dfdvdjn",
+      "fullName": "Dan H"
+    },
+    "_id": "GKVUW"
+  },
+  {
+    "title": "implement filter",
+    "description": "need to be implemented on bugs list page.",
+    "severity": 1,
+    "createdAt": 1593783104408,
+    "isDone": false,
+    "creator": {
+      "_id": "dfvjnd",
+      "fullName": "Admin"
+    },
+    "_id": "UVb57"
+  },
+  {
+    "title": "UI issues",
+    "description": "It seems all padding is gone everywhere.",
+    "severity": "2",
+    "createdAt": 1593783060351,
+    "isDone": false,
+    "creator": {
+      "_id": "dfvjnd",
+      "fullName": "Admin"
+    },
+    "_id": "IN58s"
+  }
+]

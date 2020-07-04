@@ -1,0 +1,25 @@
+.bug-details {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bug-details h2{
+    text-align: center;
+}
+
+.bug-details-creator{
+    cursor: pointer;
+}
+
+.bug-details-back{
+    text-decoration: none;
+    color: black;
+}
+
+.bug-details button{
+    justify-content: center;
+    align-items: center;
+
+}

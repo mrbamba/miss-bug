@@ -1,0 +1,18 @@
+.app-header-links{
+    padding:10px;
+    cursor: pointer;
+}
+
+.app-header-links a {
+    color: black;
+    text-decoration: none;
+
+}
+
+.app-header{
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 5px;
+    background-color: lightskyblue;
+
+}

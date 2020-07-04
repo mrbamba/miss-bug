@@ -1,0 +1,7 @@
+.bug-preview{
+    cursor: pointer;
+    transition: ease-in-out .3s;
+}
+.bug-preview:hover{
+color: tomato;
+}

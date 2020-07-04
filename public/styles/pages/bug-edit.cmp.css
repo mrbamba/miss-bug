@@ -1,0 +1,27 @@
+.edit-bug{
+    
+    padding: 10px;
+   
+}
+
+.edit-bug input {
+    margin: 10px;
+}
+
+.edit-bug textarea{
+    margin: 10px;
+}
+
+.bug-edit-save-td{
+    text-align: center;
+}
+.edit-bug-table{
+    display: flex;
+    flex-direction: column;
+}
+.edit-bug-table button{
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
