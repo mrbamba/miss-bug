@@ -18,7 +18,7 @@ const VIEW_DIR = `${__dirname}/public`;
 const app = express();
 
 // server port
-const port = 3007;
+const port = 3000;
 
 // Express config
 app.use(cookieParser());
@@ -175,18 +175,6 @@ app.post('/api/login', (req,res)=>{
           res.status(401).json({msg:'Invalid Username/Password'})
         }
       })
-
-    // if(credentials.userName==='dan'){
-    //     const user={userName:'dan'}
-    //     res.cookie('user',user)
-    //     res.json(user)
-    // }else if(credentials.userName==='yoad'){
-    //     const user = {userName:'yoad'}
-    //     res.cookie('user',user)
-    //     res.json(user)
-    // }else{
-    //     res.status(401).json({msg:'Invalid Username!'})
-    // }
 })
 
 

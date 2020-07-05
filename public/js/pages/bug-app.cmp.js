@@ -113,8 +113,6 @@ export default {
             if(!this.filterBy.txt){
                 this.bugsToShow=this.bugs
             }else {
-                // return this.bugs.filter(bug=>JSON.stringify(bug).toLowerCase().includes(this.filterBy.txt.toLowerCase()))
-                // console.log('FilterBy on bug app bugs to show',this.filterBy)
                 bugService.query(this.filterBy)
                     .then((bugs)=>{
                         this.bugsToShow=bugs

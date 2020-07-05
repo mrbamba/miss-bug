@@ -57,6 +57,10 @@ export default{
     },
     components:{
         bugLogin,
+    }, watch:{
+        '$route.params': function(){
+            this.loggedInUser= userService.getLoggedInUser()
+        }
     }
 
 }
